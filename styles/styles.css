@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#taskInput {
+ margin:auto;
+ display: block;
+ width: 200px;
+ height: 30px;
+ border: 2px solid black;
+ padding: 2px;
+ border-radius: 8px;
+ outline-width: 1px;
+ outline: none;
+ box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+#taskInput:focus{
+  border: solid 2px grey;
+}
+
+#task {
+  padding: 5px;
+  margin: 10px;
+  position: relative;
+  left: 60px;
+    
+}
+
+#taskCheckBox {
+  position: relative;
+  left: 20px;
+  top: 25px;
+}
+
+#addTaskBtn {
+  padding: 5px 10px;
+  background-color: grey;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  border: 3px solid grey;
+  margin: auto;
+  display: block;
+  position: relative;
+  left: 175px;
+  bottom: 34px;
+}
+
+#removeTaskButton{
+  scale: 1.5;
+  position: relative;
+  top: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #999;
+}
