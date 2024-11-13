@@ -5,17 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Procrastinote</title>
     <link href="styles/styles.css" rel="stylesheet">
-    <h1 id="mainHeader1"> Procrastinote </h1>
 </head>
 
 <body>
-    <div class="input_field">
-        <input type="text" id="taskInput" placeholder="Take a note...">
 
+    <h1 id="mainHeader1"> Procrastinote </h1>
+
+    <div class="taskInputContainer">
+        <div id="taskInput"> 
+            <input type="text" id="input" placeholder="Take a note...">
+        </div>
+        
         <button id="addTaskBtn" name="addTaskBtn">Add Note</button>
     </div>
     
-    <ul id="taskList"></ul>
+    <div class="note_area">
+        
+        <ul id="taskList">
+            
+        </ul>
+    
+    </div>
+   
     
     <script src="scripts\script.js"></script>
 </body>
