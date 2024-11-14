@@ -5,31 +5,39 @@ class ToDoList {
       this.bindEventListeners();
       this.addTask();
       this.checkInput();
+      this.listLimit = 0;
     }
-  
+    
+
     bindEventListeners() {
       document.getElementById("addTaskBtn").addEventListener("click", () => {
         this.addTask();
       });
+
       this.taskInput.addEventListener("click", () => {
       });
+
       this.taskInput.addEventListener("input", () => {
         this.checkInput();
-        console.log(String(this.taskInput.value))
       });
       
     }
   
     addTask() {
       const taskName = this.taskInput.value.trim();
-      if (taskName !== "") {
-    
-        const task = document.createElement("li");
-        task.setAttribute("id", "task");
+      if (taskName !== "" && this.listLimit < 18) {
+        
+        this.listLimit++;
 
+        const task = document.createElement("li");
         this.taskList.appendChild(task);
         this.taskInput.value = "";
         this.checkInput();     
+
+        //Task value
+        const taskValue = document.createElement("input")
+        taskValue.setAttribute("id", "task");
+        
 
         //Checkbox for task
         const taskCheckBox = document.createElement("input");
@@ -38,7 +46,7 @@ class ToDoList {
         
 
         //Set inner text of task element to the input value
-        task.textContent = taskName;
+        taskValue.value = taskName;
 
         //Delete Task button
         const removeButton = document.createElement("input");
@@ -46,22 +54,26 @@ class ToDoList {
         removeButton.src = "images/trash.svg";
         removeButton.setAttribute("id", "removeTaskButton");
         
+        
         task.appendChild(taskCheckBox);
+        task.appendChild(taskValue);
         task.appendChild(removeButton);
         
+
         removeButton.addEventListener('click', () =>{
           task.remove();
           removeButton.remove();
           taskCheckBox.remove();
+          this.listLimit--;
         });
         
 
         taskCheckBox.addEventListener('change', () => {
           if(taskCheckBox.checked){
-            task.classList.add("completed");
+            taskValue.classList.add("completed");
             
           }else{
-            task.classList.remove("completed");
+            taskValue.classList.remove("completed");
           }
         });
       }

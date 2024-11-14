@@ -12,12 +12,14 @@ body {
 }
 
 #addTaskBtn {
-  
+  position: absolute;
   background-color: grey;  
   color: white;
   border: none;
   cursor: pointer;
   border: 3px solid grey;
+  margin-left: 330px;
+  padding: 8px;
 }
 
 .taskInputContainer{
@@ -33,7 +35,7 @@ body {
   height: 30px;
   border: 2px solid black;
   padding: 2px;
-  border-radius: 8px;
+  border-radius: 10px;
   outline-width: 1px;
   outline: none;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
@@ -57,6 +59,7 @@ margin-top: 20px;
 border: 2px solid black;
 height: 600px;
 width: 800px;
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
 
 #taskList {
@@ -67,6 +70,11 @@ width: 800px;
   font-size: 18px;
 }
 
+li {
+display: flex;
+flex-direction: row;
+margin-top: 10px;
+}
 
 #task {
 display: flex;
@@ -74,14 +82,14 @@ flex-direction: row;
 
 }
 #taskCheckBox {
-
+margin-right: 10px;
 }
 
 #removeTaskButton {
-
+  margin-left: 500px;
 }
 
-li.completed {
+input.completed {
   text-decoration: line-through;
   color: #999;
 }
