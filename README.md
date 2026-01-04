@@ -2,6 +2,8 @@
 
 ### Class-Based Vanilla JavaScript Productivity Tool
 
+<img width="1281" height="847" alt="image" src="https://github.com/user-attachments/assets/d1f31670-1371-4951-9e3b-c70edf05d3d7" />
+
 # Project Overview
 
 Procrastinote is a streamlined, responsive task management application designed to help users capture and organize notes efficiently. Developed using Vanilla JavaScript, the project emphasizes clean DOM manipulation and an object-oriented approach to frontend state management. The application provides a focused environment for task tracking, featuring dynamic UI updates and a fixed-limit note area to prevent cognitive overload.
